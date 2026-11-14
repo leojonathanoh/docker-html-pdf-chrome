@@ -1,4 +1,6 @@
-FROM alpine:edge
+FROM alpine:3.24
+
+RUN apk add --no-cache ca-certificates
 
 RUN apk --no-cache upgrade && apk add --no-cache chromium
 RUN apk add --no-cache nodejs npm
